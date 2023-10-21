@@ -1,16 +1,16 @@
 <html>
     <head>
-        <title>My first Flask</title>
-        <link rel="stylesheet" 
-        href="{{ url_for('static', filename='styles.css') }}"
+        <title>Wisdom Time</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='styles.css') }}"
         />
     </head>
     <body>
         <div class="center">
-            <h2>
-                {{quote["quote"]}}
-            </h2>
-            <p>{{quote["season"]}} - {{quote["episode"]}}</p>
+            <h2>"{{quote['quote']}}"</h2>
+            <p>{{quote['season']}} - {{quote['episode']}}</p>
         </div>
+        {% block content %}{% endblock %}
     </body>
 </html>
