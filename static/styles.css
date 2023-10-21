@@ -1,0 +1,28 @@
+body {
+    background-color:pink;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+} 
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    width: 50%;
+    margin: 5px;
+}
+
+p {
+    text-align: end;
+    width: 50%;
+    margin: 5px;
+    color: grey;
+}

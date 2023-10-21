@@ -1,16 +1,18 @@
 from flask import Flask, render_template
 
 from quotes import *
+from random import randint
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
     name = "Alexandre"
-    tiny_list = [1,2,3,4,5,6,7,8,9,10]
+    #tiny_list = [1,2,3,4,5,6,7,8,9,10]
+    quote = quotes[randint(0, len(quotes) -1 )]
     return render_template("base.html", 
                            name=name, 
-                           tiny_list=tiny_list
+                           quote=quote
                            )
 
 @app.route("/<number>")
